@@ -4,7 +4,12 @@ import { authService } from '../services/auth.service.local.js'
 import { CarPreview } from './CarPreview.jsx'
 
 export function CarList({ cars, onRemoveCar }) {
-	const user = authService.getLoggedinUser()
+	const loggedinUser = authService.getLoggedinUser()
+
+    function canUpdateCar(car){
+        if (!car.owner) return true
+        return car.owner._id === loggedinUser._id
+    }
 
 	return <ul className="car-list">
         {cars.map(car => (
@@ -14,12 +19,15 @@ export function CarList({ cars, onRemoveCar }) {
                     <button>
                         <Link to={`/car/${car._id}`}>Details</Link>
                     </button>
-                    <div>
-                        <button onClick={() => onRemoveCar(car._id)}>Remove Car</button>
-                        <button>
-                            <Link to={`/car/edit/${car._id}`}>Edit</Link>
-                        </button>
-                    </div>
+                    {
+                        canUpdateCar(car) && 
+                        <div>
+                            <button onClick={() => onRemoveCar(car._id)}>Remove Car</button>
+                            <button>
+                                <Link to={`/car/edit/${car._id}`}>Edit</Link>
+                            </button>
+                        </div>
+                    }
                 </section>
             </li>
         ))}

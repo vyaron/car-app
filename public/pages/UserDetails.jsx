@@ -1,5 +1,5 @@
 const { useState, useEffect } = React
-const { useParams, useNavigate } = ReactRouterDOM
+const { useParams, useNavigate, Link } = ReactRouterDOM
 
 import { userService } from "../services/user.service.local.js"
 
@@ -22,10 +22,6 @@ export function UserDetails() {
             })
     }
 
-    function onBack() {
-        navigate('/')
-    }
-
     if (!user) return <div>Loading...</div>
 
     return <section className="user-details">
@@ -34,6 +30,6 @@ export function UserDetails() {
             {JSON.stringify(user, null, 2)}
         </pre>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim rem accusantium, itaque ut voluptates quo? Vitae animi maiores nisi, assumenda molestias odit provident quaerat accusamus, reprehenderit impedit, possimus est ad?</p>
-        <button onClick={onBack} >Back</button>
+        <Link to="/">Back Home</Link>
     </section>
 }
