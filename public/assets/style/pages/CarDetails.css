@@ -1,3 +1,8 @@
+.car-details {
+    max-width: 600px;
+    margin: auto;
+}
+
 
 .car-details h1 {
     color: var(--clr1);
@@ -9,8 +14,3 @@
     color: var(--clr2);
 }
 
-.car-details img {
-    max-width: 200px;
-    display: block;
-    margin: auto;
-}

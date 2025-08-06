@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
 
+    padding: .5em 1em;
     background-color: var(--clr1);
     color: var(--clr2bg-light);
 }
@@ -22,9 +23,9 @@
 }
 
 a.active {
-    color: rgb(241, 212, 241);
+    color: rgb(151, 224, 184);
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: overline;
 }
 
 .app-header .user {

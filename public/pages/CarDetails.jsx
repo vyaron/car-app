@@ -34,6 +34,7 @@ export function CarDetails() {
     return <section className="car-details">
         <h1>Car Vendor: {car.vendor}</h1>
         <h2>Car Speed: {car.speed}</h2>
+        <img src={`../assets/img/${car.vendor}.png`} alt="" />
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim rem accusantium, itaque ut voluptates quo? Vitae animi maiores nisi, assumenda molestias odit provident quaerat accusamus, reprehenderit impedit, possimus est ad?</p>
         
         <button onClick={onBack} >Back</button>
