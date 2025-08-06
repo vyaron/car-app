@@ -20,10 +20,10 @@ function query(filterBy = { txt: '' }) {
     if (filterBy.minSpeed) {
         carsToReturn = carsToReturn.filter(car => car.speed >= filterBy.minSpeed)
     }
-    if (filterBy.pageIdx !== undefined) {
-        const startIdx = filterBy.pageIdx * PAGE_SIZE
-        carsToReturn = carsToReturn.slice(startIdx, startIdx + PAGE_SIZE)
-    }
+    // if (filterBy.pageIdx !== undefined) {
+    //     const startIdx = filterBy.pageIdx * PAGE_SIZE
+    //     carsToReturn = carsToReturn.slice(startIdx, startIdx + PAGE_SIZE)
+    // }
     return Promise.resolve(carsToReturn)
 }
 
@@ -32,17 +32,22 @@ function getById(carId) {
     return Promise.resolve(car)
 }
 
-function remove(carId) {
+function remove(carId, loggedinUser) {
     const idx = cars.findIndex(car => car._id === carId)
     if (idx === -1) return Promise.reject('No Such Car')
 
+    const car = cars[idx]
+
+    if (!loggedinUser.isAdmin && car.owner._id !== loggedinUser._id) return Promise.reject('Not your Car')
     cars.splice(idx, 1)
     return _saveCarsToFile()
+
 }
 
-function save(car) {
+function save(car, loggedinUser) {
     if (car._id) {
         const carToUpdate = cars.find(currCar => currCar._id === car._id)
+        if (!loggedinUser.isAdmin && carToUpdate.owner._id !== loggedinUser._id) return Promise.reject('Not your car')
         carToUpdate.vendor = car.vendor
         carToUpdate.speed = car.speed
     } else {

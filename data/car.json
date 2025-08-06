@@ -1,15 +1,5 @@
 [
   {
-    "vendor": "Puki Car",
-    "speed": 220,
-    "_id": "WepLV",
-    "owner": {
-      "_id": "u101",
-      "fullname": "Puki Ja",
-      "isAdmin": true
-    }
-  },
-  {
     "vendor": "Muki Car",
     "speed": 123,
     "_id": "wYrey",
@@ -20,31 +10,11 @@
   },
   {
     "vendor": "Kiki Car",
-    "speed": 676,
+    "speed": 67677,
     "_id": "em8lL",
     "owner": {
       "_id": "6iykr",
       "fullname": "Kiki Ki"
-    }
-  },
-  {
-    "vendor": "GuguCar",
-    "speed": 100,
-    "_id": "LwGFo",
-    "owner": {
-      "username": "gugu",
-      "password": "gugu",
-      "fullname": "Gugu Ga",
-      "_id": "qLEdY"
-    }
-  },
-  {
-    "vendor": "Mumu Car",
-    "speed": 3333,
-    "_id": "WEoku",
-    "owner": {
-      "_id": "tUZPy",
-      "fullname": "Mumu Ma"
     }
   },
   {
@@ -83,6 +53,40 @@
     "owner": {
       "_id": "wfawE",
       "fullname": "cc"
+    }
+  },
+  {
+    "vendor": "Puki123",
+    "speed": 12333,
+    "_id": "cnOTw",
+    "owner": {
+      "_id": "u101",
+      "username": "puki",
+      "fullname": "Puki Ja",
+      "score": 100,
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Bubu90",
+    "speed": 9090,
+    "_id": "3UxJi",
+    "owner": {
+      "_id": "u101",
+      "username": "puki",
+      "fullname": "Puki Ja",
+      "score": 100,
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "ShukiCar",
+    "speed": 9090,
+    "_id": "BVggO",
+    "owner": {
+      "fullname": "Shuki Shuk",
+      "username": "shuki",
+      "_id": "877JG"
     }
   }
 ]

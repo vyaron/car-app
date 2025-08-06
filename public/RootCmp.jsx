@@ -2,7 +2,7 @@ const { useState } = React
 const Router = ReactRouterDOM.BrowserRouter
 const { Routes, Route, Navigate } = ReactRouterDOM
 
-import { authService } from './services/auth.service.local.js'
+import { authService } from './services/auth.service.js'
 
 import { AppHeader } from './cmps/AppHeader.jsx'
 import { Team } from './cmps/Team.jsx'

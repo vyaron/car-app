@@ -1,6 +1,6 @@
 const { Link } = ReactRouterDOM
 
-import { authService } from '../services/auth.service.local.js'
+import { authService } from '../services/auth.service.js'
 import { CarPreview } from './CarPreview.jsx'
 
 export function CarList({ cars, onRemoveCar }) {
@@ -8,6 +8,8 @@ export function CarList({ cars, onRemoveCar }) {
 
     function canUpdateCar(car){
         if (!car.owner) return true
+        if (!loggedinUser) return false
+        if (loggedinUser.isAdmin) return true
         return car.owner._id === loggedinUser._id
     }
 

@@ -26,7 +26,9 @@ function remove(carId) {
 
 function save(car) {
     const method = car._id ? 'put' : 'post'
-    return axios[method](BASE_URL, car).then(res => res.data)
+    const url = car._id ? BASE_URL + car._id : BASE_URL
+    
+    return axios[method](url, car).then(res => res.data)
 }
 
 function getEmptyCar(vendor = '', speed = '') {

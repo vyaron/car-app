@@ -1,7 +1,7 @@
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
 
-import { carService } from "../services/car.service.local.js"
+import { carService } from "../services/car.service.js"
 
 export function CarDetails() {
 
