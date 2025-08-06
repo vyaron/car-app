@@ -1,0 +1,32 @@
+.app-header {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--clr1);
+    color: var(--clr2bg-light);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.app-header h1 {
+    flex-grow: 1;
+}
+
+.app-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+a.active {
+    color: rgb(241, 212, 241);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.app-header .user {
+    margin-inline-start: 2em;
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "vendor": "Puki Car",
+    "speed": 220,
+    "_id": "WepLV",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Muki Car",
+    "speed": 123,
+    "_id": "wYrey",
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    }
+  },
+  {
+    "vendor": "Kiki Car",
+    "speed": 676,
+    "_id": "em8lL",
+    "owner": {
+      "_id": "6iykr",
+      "fullname": "Kiki Ki"
+    }
+  },
+  {
+    "vendor": "GuguCar",
+    "speed": 100,
+    "_id": "LwGFo",
+    "owner": {
+      "username": "gugu",
+      "password": "gugu",
+      "fullname": "Gugu Ga",
+      "_id": "qLEdY"
+    }
+  },
+  {
+    "vendor": "Mumu Car",
+    "speed": 3333,
+    "_id": "WEoku",
+    "owner": {
+      "_id": "tUZPy",
+      "fullname": "Mumu Ma"
+    }
+  },
+  {
+    "vendor": "Puki Car 44444444",
+    "speed": 444,
+    "_id": "3ky1F",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Puki Car 555",
+    "speed": 555,
+    "_id": "Uf5i1",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Puki Ja",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Seak Ateka",
+    "speed": 1234,
+    "_id": "yj4FR",
+    "owner": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    }
+  },
+  {
+    "vendor": "baba",
+    "speed": 199,
+    "_id": "R3zU9",
+    "owner": {
+      "_id": "wfawE",
+      "fullname": "cc"
+    }
+  }
+]
