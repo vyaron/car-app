@@ -12,6 +12,7 @@ function checkLogin({ username, password }) {
     return userService.getByUsername(username)
         .then(user => {
             if (user && user.password === password) {
+                user = { ...user }
                 delete user.password
                 return Promise.resolve(user)
             }

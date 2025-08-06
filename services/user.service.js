@@ -49,6 +49,7 @@ function add(user) {
         
             return _saveUsersToFile()
                 .then(() => {
+					user = { ...user }
                     delete user.password
                     return user
                 })
